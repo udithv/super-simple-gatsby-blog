@@ -31,6 +31,13 @@ module.exports = {
                 pathToConfigModule: `src/utils/typography`,
             },
         },
+        {
+            resolve: `gatsby-plugin-nprogress`,
+            options: {
+              color: `tomato`,
+              showSpinner: false,
+            },
+        },
         `gatsby-plugin-offline`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-netlify-cms`
