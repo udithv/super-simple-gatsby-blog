@@ -5,7 +5,9 @@ import { Helmet } from "react-helmet"
 
 import { rhythm } from "../utils/typography"
 
-export default ({ children }) => (
+
+
+export default ({ children, postTitle }) => (
     <StaticQuery
         query={graphql`
             query {
@@ -27,7 +29,7 @@ export default ({ children }) => (
             >
                 <Helmet>
                     <meta charSet="utf-8" />
-                    <title>Blog</title>
+                    <title>{postTitle}</title>
                 </Helmet>
                 <Link to={`/`}>
                     <h3

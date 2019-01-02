@@ -1,11 +1,10 @@
 import React from "react"
-import Layout from "../components/layout"
+import IndexLayout from "../components/indexLayout"
 import { graphql } from "gatsby";
 
 export default ({ data }) => {
-    console.log(data)
     return (
-        <Layout>
+        <IndexLayout>
             <div>
                 <h1>My Site's Files</h1>
                 <table>
@@ -29,7 +28,7 @@ export default ({ data }) => {
                     </tbody>
                 </table>
             </div>
-        </Layout>
+        </IndexLayout>
     )
 }
 
