@@ -1,10 +1,37 @@
 import React from "react"
-import { css } from "@emotion/core"
+import styled from "styled-components"
 import { StaticQuery, Link, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import { rhythm } from "../utils/typography"
 
+const PostContainer = styled.div`
+    
+    height: 100vh;
+    width: 100%;
+    padding: ${rhythm(1)+' '+rhythm(2)};
+`;
+
+const Nav = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: ${rhythm(2)};
+`
+
+const MainTitle = styled.h3`
+    font-style: normal;
+
+    a {
+        text-decoration: none;
+    }
+`
+
+const Navlinks = styled.div`
+    a:not(:last-child) {
+        margin-right: ${rhythm(1)};  
+    }
+`
 
 
 export default ({ children, postTitle }) => (
@@ -19,39 +46,28 @@ export default ({ children, postTitle }) => (
             }
         `}
         render={ data => (
-            <div
-                css={css`
-                    margin: 0 auto;
-                    max-width: 700px;
-                    padding: ${rhythm(2)};
-                    padding-top: ${rhythm(1.5)};
-                `}
-            >
+            <PostContainer>
                 <Helmet>
                     <meta charSet="utf-8" />
                     <title>{postTitle}</title>
                 </Helmet>
-                <Link to={`/`}>
-                    <h3
-                        css={css`
-                            margin-bottom: ${rhythm(2)};
-                            display: inline-block;
-                            font-style: normal;
-                        `}
-                    >
-                        {data.site.siteMetadata.title}
-                    </h3>
-                </Link>
-                <Link 
-                    to={`/about/`}
-                    css={css`
-                        float: right;
-                    `}
-                >
-                    About
-                </Link>
+                <Nav>
+                    <MainTitle>
+                        <Link to={`/`}>
+                            {data.site.siteMetadata.title}
+                        </Link>
+                    </MainTitle>
+                    <Navlinks>
+                        <Link to={`/about/`}>
+                            About
+                        </Link>
+                        <Link to={`/contact/`}>
+                            Contact me
+                        </Link>
+                    </Navlinks>
+                </Nav>
                 {children}
-            </div>
+            </PostContainer>
         )}
     />
     

@@ -1,6 +1,7 @@
 module.exports = {
     siteMetadata: {
-        title: `Panding Eating Lots`
+        title: `Udith's Blog`,
+        description: `This is Udith's personal blog. It covers technology, gaming, programming, movies and tv shows.`
     },
     plugins: [
         {
@@ -56,6 +57,12 @@ module.exports = {
         },
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-offline`,
+        {
+            resolve: 'gatsby-plugin-html-attributes',
+            options: {
+              lang: 'en'
+            }
+        },
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-netlify-cms`
     ],

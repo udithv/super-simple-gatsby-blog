@@ -4,12 +4,6 @@ import styled from 'styled-components'
 
 const SidebarWrapper = styled.div`
     flex: 1;
-    height: 100%;
-    border-right: 1px solid grey
-
-    @media (max-width: 700px) {
-        display: none;
-    }
 `
 
 const SidebarContainer = styled.div`
