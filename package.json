@@ -13,7 +13,7 @@
     "babel-plugin-styled-components": "^1.10.0",
     "emotion": "^10.0.5",
     "emotion-server": "^10.0.5",
-    "gatsby": "^2.0.33",
+    "gatsby": "*",
     "gatsby-plugin-emotion": "^3.0.1",
     "gatsby-plugin-html-attributes": "^1.0.5",
     "gatsby-plugin-manifest": "^2.0.12",
