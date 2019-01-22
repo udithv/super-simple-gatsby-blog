@@ -1,5 +1,5 @@
 {
-  "name": "My Blog",
+  "name": "blog",
   "description": "A blog made with static site generator",
   "license": "MIT",
   "scripts": {

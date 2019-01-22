@@ -32,7 +32,10 @@ const Navlinks = styled.div`
         margin-right: ${rhythm(1)};  
     }
 `
-
+const Container = styled.div`
+    margin: 1rem auto;
+    width: 75%;
+`;
 
 export default ({ children, postTitle }) => (
     <StaticQuery
@@ -66,7 +69,9 @@ export default ({ children, postTitle }) => (
                         </Link>
                     </Navlinks>
                 </Nav>
-                {children}
+                <Container>
+                    {children}
+                </Container>
             </PostContainer>
         )}
     />
