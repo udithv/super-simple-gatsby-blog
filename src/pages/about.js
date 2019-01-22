@@ -1,14 +1,25 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import styled from "styled-components"
 import IndexLayout from "../components/indexLayout"
+
+const Img = styled.img`
+    display: block;
+    margin: 10px auto;
+`;
 
 export default ({ data }) => (
     <IndexLayout>
-        <h1>About {data.site.siteMetadata.title}</h1>
+        <h1>About <Link to="/">{data.site.siteMetadata.title}</Link></h1>
         <p>
-            We're the only site running on your computer dedicated to showing the best photos and videos 
-            of pandas eating lots of food.
+            Udith (yes, I am talking in the third person) is a computer engineer with a Bachelor's degree. He is a  web developer interested in 
+            web, programming and anything that has to do with technology.
+            <br />
+            I am also an shitty flute player.
         </p>
+
+        <Img src="https://thumbs.gfycat.com/SomberRemarkableAnura-small.gif" alt="shitty_flute" />
+
     </IndexLayout>
 )
 
