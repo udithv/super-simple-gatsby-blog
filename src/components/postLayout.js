@@ -78,7 +78,7 @@ const Hr = styled.hr`
 `;
 
 
-export default ({ children, postTitle }) => (
+export default ({ children, postTitle, tagArray }) => (
     <StaticQuery
         query={graphql`
             query {
@@ -113,12 +113,15 @@ export default ({ children, postTitle }) => (
                 <Container>
                     {children}
                     <Hr />
-                    <Tags>
-                        <Tag>nodejs</Tag>
-                        <Tag>reactjs</Tag>
-                        <Tag>mongodb</Tag>
-                        <Tag>graphql</Tag>
-                    </Tags>
+                    {
+                        tagArray && (
+                            <Tags>
+                                {
+                                    tagArray.map(t => <Tag>{t}</Tag>)
+                                }
+                            </Tags>
+                        )
+                    }
                 </Container>
             </PostContainer>
         )}

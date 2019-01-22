@@ -5,7 +5,6 @@ import { rhythm } from "../utils/typography"
 import IndexLayout from "../components/indexLayout"
 
 export default ({ data }) => {
-    console.log(data)
     return (
         <IndexLayout>
             <div>
