@@ -9,7 +9,7 @@ const Container = styled.div`
     display: flex;
     height: 100vh;
     width: 100%;
-    padding: ${rhythm(1)+' '+rhythm(2)};
+    padding: ${0+' '+rhythm(2)};
 
     @media(max-width: 768px) {
         flex-direction: column;
@@ -18,9 +18,15 @@ const Container = styled.div`
 const ArticlesWrapper = styled.div`
     flex: 3;
     height: 100%;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     @media(max-width: 768px) {
-        flex: 1
+        flex: 1;
+        overflow: unset;
     }
 `
 export default ({ children, postTitle }) => (

@@ -1,19 +1,25 @@
 module.exports = {
     siteMetadata: {
         title: `Udith's Blog`,
-        description: `This is Udith's personal blog. It covers technology, gaming, programming, movies and tv shows.`
+        author: `Udith Victor`,
+        email: `udithv01@gmail.com`,
+        description: `This is Udith's personal blog. It covers technology, gaming, programming, movies and tv shows.`,
+        sociallinks: {
+            github: `https://www.github.com/udithv`,
+            linkedin: `https://www.linkedin.com/udithv`,
+            medium: `https://www.medium.com/udithv`,
+            stackoverflow: `https://www.stackoverflow.com/udithv`
+        }
     },
     plugins: [
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: "GatsbyJS",
-                short_name: "GatsbyJS",
+                name: "Udith's Blog",
+                short_name: "Udith's Blog",
                 start_url: "/",
                 background_color: "#6b37bf",
                 theme_color: "#6b37bf",
-                // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-                // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
                 display: "standalone",
             },
         },

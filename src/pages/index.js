@@ -7,7 +7,7 @@ import IndexLayout from "../components/indexLayout"
 export default ({ data }) => {
     return (
         <IndexLayout>
-            <div>
+            <>
                 <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
                 {data.allMarkdownRemark.edges.map(({ node }) => (
                     <div key={node.id}>
@@ -36,7 +36,7 @@ export default ({ data }) => {
                         <p>{node.excerpt}</p>
                     </div>
                 ))}
-            </div>
+            </>
         </IndexLayout>
     )
 }
