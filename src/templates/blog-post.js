@@ -9,6 +9,7 @@ export default ({ data }) => {
             postTitle={post.frontmatter.title} 
             tagArray={post.frontmatter.tags}
             mediumUrl={post.frontmatter.mediumurl}
+            repoUrl={post.frontmatter.githubrepourl}
         >
             <div>
                 <h1>{post.frontmatter.title}</h1>
@@ -26,6 +27,7 @@ export const query = graphql`
                 title
                 tags
                 mediumurl
+                githubrepourl
             }
         }
     }
