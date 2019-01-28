@@ -127,10 +127,10 @@ export default ({ children, postTitle, mediumUrl, repoUrl, tagArray }) => (
                         (<p>
                         Checkout the post on <a href={mediumUrl} target="__blank">Medium</a> and give me some claps if u dig the post...peace ✌️.
                         </p>)}
-                    {/* {repoUrl && 
+                    {repoUrl && 
                         (<p>
                         Source Code can be found on this <a href={repoUrl} target="__blank">Github repo</a>.
-                        </p>)} */}
+                        </p>)}
                 </Container>
             </PostContainer> 
         )}
