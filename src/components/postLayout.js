@@ -129,7 +129,7 @@ export default ({ children, postTitle, mediumUrl, repoUrl, tagArray }) => (
                         </p>)}
                     {repoUrl && 
                         (<p>
-                        Source Code can be found on the<a href={repoUrl} target="__blank">Github repo</a>.
+                        Source Code can be found on this <a href={repoUrl} target="__blank">Github repo</a>.
                         </p>)}
                 </Container>
             </PostContainer> 
