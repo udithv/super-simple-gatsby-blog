@@ -78,7 +78,7 @@ const Hr = styled.hr`
 `;
 
 
-export default ({ children, postTitle, tagArray }) => (
+export default ({ children, postTitle, mediumUrl, tagArray }) => (
     <StaticQuery
         query={graphql`
             query {
@@ -123,9 +123,9 @@ export default ({ children, postTitle, tagArray }) => (
                         )
                     }
 
-                    <p>
-                        Checkout the post on <a href="https://www.google.com" target="__blank">Medium</a> and give me some claps if u dig the post...peace ✌️.
-                    </p>
+                    {mediumUrl && (<p>
+                        Checkout the post on <a href={mediumUrl} target="__blank">Medium</a> and give me some claps if u dig the post...peace ✌️.
+                    </p>)}
                 </Container>
             </PostContainer>
         )}
