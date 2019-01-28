@@ -12,6 +12,7 @@ collections:
     create: true
     fields: 
       - { name: date, label: Date, widget: date } 
-      - { name: title, label: Title }
+      - { name: title, label: Title, widget: text }
+      - { name: mediumurl, label: "Medium URL", widget: string}
       - { name: body, label: Body, widget: markdown } 
       - { name: tags, label: Tags, widget: list }
