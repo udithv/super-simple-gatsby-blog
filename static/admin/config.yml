@@ -13,7 +13,7 @@ collections:
     fields: 
       - { name: date, label: Date, widget: date } 
       - { name: title, label: Title }
-      - { name: mediumurl, label: "Medium URL", widget: string}
-      - { name: githubrepourl, label: "Github Repo URL", widget: string}
+      - { name: mediumurl, label: "Medium URL", widget: string, required: false}
+      - { name: githubrepourl, label: "Github Repo URL", widget: string, required: false}
       - { name: body, label: Body, widget: markdown } 
       - { name: tags, label: Tags, widget: list }
