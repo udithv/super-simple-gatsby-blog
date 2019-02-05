@@ -12,7 +12,7 @@ export default ({ data }) => (
     <IndexLayout>
         <h1>About <Link to="/">{data.site.siteMetadata.title}</Link></h1>
         <p>
-            Udith (yes, I am talking in the third person) is a computer engineer with a Bachelor's degree. He is a  web developer interested in 
+            Udith (yes, I am talking in the third person) is a computer engineer with a Bachelor's degree. He is a developer interested in 
             web, programming and anything that has to do with technology.
             <br />
             I am also an shitty flute player.
